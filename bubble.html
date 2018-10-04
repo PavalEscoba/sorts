@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function bubbleSort(arr) { 
+      var len = arr.length; //захоўваем даўжыню масіва ў пераменную 
+      for (let i = 0; i < len - 1; i++) { // першы цыкл
+        for (let j = 0; j < len - 1 - i; j++) { // другі цыкл, каб прайсціся па ўсіх элементах і параўнаць іх
+          if(arr[j]>arr[j+1]){ // калі знаходзім, што левы большы за правы, то
+            var temp = arr[j+1]; // захоўваем правы у часовую пераменную
+            arr[j+1] = arr[j]; // на месца правага захоўваем левы
+            arr[j] = temp; // на месца левага захоўваем часовую
+          }
+        }
+      }
+      return (arr); // вяртаем адсартыраваны масіў.
+    }
+  </script>
+</body>
+
+</html>
