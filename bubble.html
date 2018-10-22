@@ -9,20 +9,45 @@
 </head>
 
 <body>
+    <p>Узята й разабрана  <a href="http://mathhelpplanet.com/static.php?p=javascript-algoritmy-sortirovki">адсюль</a></p>
+  
   <script>
-    function bubbleSort(arr) { 
+    function bubbleSort(arr) {
       var len = arr.length; //захоўваем даўжыню масіва ў пераменную 
       for (let i = 0; i < len - 1; i++) { // першы цыкл
         for (let j = 0; j < len - 1 - i; j++) { // другі цыкл, каб прайсціся па ўсіх элементах і параўнаць іх
-          if(arr[j]>arr[j+1]){ // калі знаходзім, што левы большы за правы, то
-            var temp = arr[j+1]; // захоўваем правы у часовую пераменную
-            arr[j+1] = arr[j]; // на месца правага захоўваем левы
+          if (arr[j] > arr[j + 1]) { // калі знаходзім, што левы большы за правы, то
+            var temp = arr[j + 1]; // захоўваем правы у часовую пераменную
+            arr[j + 1] = arr[j]; // на месца правага захоўваем левы
             arr[j] = temp; // на месца левага захоўваем часовую
           }
         }
       }
       return (arr); // вяртаем адсартыраваны масіў.
     }
+
+
+
+    const bubble = (arr) => {
+      let len = arr.length - 1;
+      for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len - i; j++) {
+          if (arr[j] < arr[j + 1]) {
+            let temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+          }
+        }
+      }
+      return arr;
+    }
+
+
+    
+
+    var a = [390, 22, 31, 900, 11, 1, 4, 89, 1000];
+
+   
   </script>
 </body>
 
